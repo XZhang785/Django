@@ -95,7 +95,7 @@ class HDFSClient:
         return content
 
 if __name__ == '__main__':
-    hdfs = HDFSClient("hdfs://localhost:9000", "zhangqinming")
+    hdfs = HDFSClient("https://localhost:9000", "zhangqinming")
     print("success connect!")
     print(hdfs.list_hdfs())
     pcontent = f.read()
