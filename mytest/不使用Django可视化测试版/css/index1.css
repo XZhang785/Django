@@ -1,0 +1,184 @@
+body{
+    background:url(1.png);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+.title{
+    height: 20%;
+}
+.main{
+    height: 600px;
+    width: 1650px;
+}
+.input{
+    width: 29%;
+    /* border: 1px solid; */
+    float: left;
+}
+.output{
+    width: 69%;
+    /* border: 1px solid; */
+    float: left;
+}
+.dataload{
+    position:relative;
+    left: 20%;
+    width: 300px;
+    height: 500px;
+}
+/* .d1{
+    display: block;
+    width: 300px;
+    height: 30px;
+} */
+.d2{
+    position: relative;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+}
+/* .d1 {
+    position: relative;
+    padding:  4px 10px;
+    height: 60px;
+    width: 200px;
+    font: 400 16px/60px "宋体";
+    text-align: center;
+    cursor: pointer;
+    color: deepskyblue;
+    background: #baffcb;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+} */
+.a-upload {
+    padding: 4px 10px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.a-upload  input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
+/*样式2*/
+.file {
+    position: relative;
+    top: 20%;
+    left: 23%;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+
+.algorithm1{
+    float: left;
+    width: 33%;
+}
+.algorithm2{
+    float: left;
+    width: 33%;
+}
+.algorithm3{
+    float: left;
+    width: 33%;
+}
+.picture1{
+    position: relative;
+
+    top: 20px;
+    left: 24px;
+    height: 330px;
+    width: 330px;
+}
+.picture1 .p11{
+    position:relative;
+}
+.picture2{
+    position: relative;
+
+    top: 20px;
+    left: 24px;
+    height: 330px;
+    width: 330px;
+}
+.picture3{
+    position: relative;
+
+    top: 20px;
+    left: 24px;
+    height: 330px;
+    width: 330px;
+}
+.test{
+    position: relative;
+    top: 42%;
+}
+.delete2{
+
+}
+.d3{
+    position: absolute;
+    left: 740px;
+    height: 70px;
+}
+.d4{
+    position: absolute;
+    left: 860px;
+    height: 70px;
+
+}

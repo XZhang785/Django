@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="../static/index.css" />
+    <title>移动用户APP使用分析系统—聚类</title>
+    <script src='../static/js/echarts.min.js'></script>
+    <script src='../static/js/flexible.js'></script>
+    <script src='../static/js/jquery.js'></script>
+</head>
+
+<body>
+    <div class="head">
+        <h1>移动用户APP使用分析系统—聚类</h1>
+        <div class="showTime">当前时间：</div>
+        <script>
+        var t = null;
+        t = setTimeout(time, 1000); //開始运行
+        function time() {
+            clearTimeout(t); //清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours(); //获取时
+            var m = dt.getMinutes(); //获取分
+            var s = dt.getSeconds(); //获取秒
+            document.querySelector(".showTime").innerHTML =
+            "当前时间：" +
+            y +
+            "年" +
+            mt +
+            "月" +
+            day +
+            "日-" +
+            h +
+            "时" +
+            m +
+            "分" +
+            s +
+            "秒";
+            t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+        </script>
+    </div>
+    
+    <div class="right">        
+        <div id="output"></div>
+        <table id="tab" align="center">
+            <!-- <caption>表格展示模块</caption>
+            <thead>
+                <tr>
+                    <th colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标题&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                </tr>
+            </thead> -->
+            <tbody>
+                <!-- 此处可以置空，也可以加一行，作为表头行 -->
+            </tbody>
+            <!-- <tfoot><td>备注：</td><td colspan="2"></td></tfoot> -->
+        </table>
+    </div>
+    <div class="left">
+        <div class="top">
+            <div class="top-left">
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <input type="file" name="upload"  class="inp" onchange='openFile(event)' >
+                </form>                
+                <input type="submit" value="显示数据"  onclick='revere()' class="revere">                
+                <input class="btn1" type="submit" onclick='click1()' value="轮廓系数和调整兰德系数对比">
+                <input class="btn2" type="submit" onclick='click2()' value="运行时间对比">
+                <input class="btn3" type="submit" onclick='click3()' value="热力图">
+                
+            </div>
+            <div class="top-right">
+                
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="chart"></div>
+            <div class="chart1"></div>
+            
+        </div>
+    </div>
+    <script type="text/javascript">
+    
+    	function addtr(row_index,row_element_arr){
+            var tab=document.getElementById('tab');
+            if(row_index%2==0)
+            {
+            	var html="<tr style='background: #C0C0C0'>";
+            }
+            else
+            {
+            	var html="<tr style='background: #fff'>";
+            }
+            var i;
+            for(i=0;i<row_element_arr.length;i++)
+            {
+
+                html+='<td>'+String(row_element_arr[i])+'</td>';
+            }
+            html+="</td></tr>";
+            tab.innerHTML+=html;
+        }
+        var openFile = function(event)
+        {
+            var input = event.target;
+            var reader = new FileReader();
+            reader.onload = function() 
+            {
+                if(reader.result) 
+                {
+                    //文件内容:reader.result
+                    var arr=reader.result.split("\n");
+                    
+                    // $("#output").html(reader.result);
+                    for (let index=0; index < arr.length; index++)
+                    {
+                    	// arr[index],一行数据
+                        row_element_arr=arr[index].split(",");
+                        addtr(index,row_element_arr);
+                    }
+                }
+            };
+            reader.readAsText(input.files[0]);
+        };
+    </script>
+    
+    <script src="../static/js/index.js"></script>
+    
+    
+</body>

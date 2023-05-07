@@ -1,0 +1,7 @@
+,device_id,gender,age,group,location,is_installed,is_active,phone_brand,device_model
+0,-9.22296e+18,M,36,M32-38,2,1,0,三星,Galaxy Note 2
+1,-9.20098e+18,M,31,M29-31,1,1,1,小米,红米2A
+2,-9.11845e+18,M,21,M22-,1,1,1,三星,Galaxy S6 Edge+
+3,-9.10702e+18,F,39,F33-42,1,1,0,小米,红米note
+4,-9.06446e+18,M,45,M39+,1,1,0,小米,MI 3
+5,-9.05647e+18,M,25,M23-26,0,1,1,华为,荣耀6 Plus
