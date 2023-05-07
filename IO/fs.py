@@ -98,4 +98,7 @@ if __name__ == '__main__':
     hdfs = HDFSClient("http://Single032004134:9870", "zhangqinming")
     print("success connect!")
     print(hdfs.list_hdfs())
-    pcontent = f.read()
+    hdfs.change_base_dir("/electric-analyse/data/input")
+    print(hdfs.list_hdfs())
+    print("begin read file~~~~~")
+    print(hdfs.read_hdfs_file("dataset_test.csv"))
